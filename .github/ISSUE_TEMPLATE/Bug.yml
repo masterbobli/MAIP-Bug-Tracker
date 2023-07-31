@@ -1,0 +1,116 @@
+name: Bug
+description: For general issues that don't fit into another category
+title: "Country Affected - Short Description of Issue"
+labels: Bug
+
+body:
+  - type: input
+    id: OS
+    attributes:
+      label: Operating System
+      placeholder: ex. Windows 11, macOS Monterey
+    validations:
+      required: true
+  - type: input
+    id: HOI4_version
+    attributes:
+      label: HOI4 version
+      placeholder: Do NOT write latest version. ex. 1.11.7
+    validations:
+      required: true
+  - type: input
+    id: mod_version
+    attributes:
+      label: Mod version
+      placeholder: Do NOT write latest version. ex. 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: other_mods
+    attributes:
+      label: Do you have other mods in use?
+      description: Write none if you only have this mod enabled.
+      placeholder: ex. Colored Buttons
+    validations:
+      required: true
+  - type: dropdown
+    id: steam
+    attributes:
+      label: Were you using Steam?
+      options:
+        - 'Yes'
+        - 'No'
+    validations:
+      required: true
+  - type: dropdown
+    id: expansion
+    attributes:
+      label: Which major expansions do you have?
+      description: Click all expansions that you have.
+      multiple: true
+      options:
+        - 'None'
+        - 'All'
+        - 'TFV'
+        - 'DOD'
+        - 'WTT'
+        - 'MTG'
+        - 'LAR'
+        - 'BFTB'
+        - 'NSB'
+        - 'BBA'
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Files
+      description: |
+        Link(s) to any log files / save games that may help debug your issue.
+        Log files can be found under Documents\Paradox Interactive\Hearts of Iron IV\logs
+        Save games can be found under Documents\Paradox Interactive\Hearts of Iron IV\save games
+      placeholder: 
+    validations:
+      required: false
+  - type: textarea
+    id: bugdesc
+    attributes:
+      label: Describe the bug
+      description: |
+        A clear and concise description of what the bug is
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce / Cause of the issue
+      description: Tell me how I can reproduce the issue / fix this issue
+      placeholder: |
+        1. Go to ...  
+        2. Click on ...  
+        3. Scroll down to ...  
+        4. See error
+    validations:
+      required: true
+  - type: input
+    id: expectedBehaviour
+    attributes:
+      label: Expected behaviour
+      description: |
+        A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain your problem.
+    validations:
+      required: false
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Add any other context about the problem here
+    validations:
+      required: false

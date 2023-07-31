@@ -1,0 +1,89 @@
+name: Localization
+description: For small issues related to spelling, grammar, and other typos. NOTE - If text is partially missing or absent entirely, please fill out a Bug issue type instead
+title: "Country Affected - Short Description of Issue"
+labels: Localization
+
+body:
+  - type: input
+    id: HOI4_version
+    attributes:
+      label: HOI4 version
+      placeholder: Do NOT write latest version. ex. 1.11.7
+    validations:
+      required: true
+  - type: input
+    id: mod_version
+    attributes:
+      label: Mod version
+      placeholder: Do NOT write latest version. ex. 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: other_mods
+    attributes:
+      label: Do you have other mods in use?
+      description: Write none if you only have this mod enabled.
+      placeholder: ex. Colored Buttons
+    validations:
+      required: true
+  - type: dropdown
+    id: steam
+    attributes:
+      label: Were you using Steam?
+      options:
+        - 'Yes'
+        - 'No'
+    validations:
+      required: true
+  - type: dropdown
+    id: expansion
+    attributes:
+      label: Which major expansions do you have?
+      description: Click all expansions that you have.
+      multiple: true
+      options:
+        - 'None'
+        - 'All'
+        - 'TFV'
+        - 'DOD'
+        - 'WTT'
+        - 'MTG'
+        - 'LAR'
+        - 'BFTB'
+        - 'NSB'
+        - 'BBA'
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Files
+      description: |
+        Link(s) to any log files / save games that may help debug your issue.
+        The most important one is error.log
+        Log files can be found under Documents\Paradox Interactive\Hearts of Iron IV\logs
+        Save games can be found under Documents\Paradox Interactive\Hearts of Iron IV\save games
+      placeholder: 
+    validations:
+      required: false
+  - type: textarea
+    id: bugdesc
+    attributes:
+      label: List the loc issues below
+      description: |
+        List the Loc issues down below (preferably with screenshot attached below with event id / focus id shown).
+        Please limit the list to 100 issues. Create another bug report if more are found.
+      placeholder: |
+        - [ ] 1. 
+        (Screenshot here)
+        - [ ] 2. 
+        (Screenshot here)
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Add any other context about the problem here
+    validations:
+      required: false
