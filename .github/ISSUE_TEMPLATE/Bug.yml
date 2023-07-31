@@ -49,7 +49,6 @@ body:
       description: Click all expansions that you have.
       multiple: true
       options:
-        - 'None'
         - 'All'
         - 'TFV'
         - 'DOD'
